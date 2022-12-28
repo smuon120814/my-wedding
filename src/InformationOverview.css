@@ -1,0 +1,135 @@
+@media only screen and (max-width: 599px) {
+  @font-face {
+    font-family: myWeddingFont;
+    src: url("fonts/dancing_script.ttf");
+  }
+
+  .gi-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+  .gi-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    background-image: url("./images/information_bck2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: myWeddingFont;
+  }
+  .gi-title {
+    align-self: center;
+    font-family: myWeddingFont;
+    margin-bottom: 4rem;
+    font-size: 48px;
+    animation-delay: 0.5s;
+    animation: fade-up 1s ease-out forwards;
+  }
+  .gi-description {
+    margin: 0px 40px 0px 40px;
+    color: rgb(62, 62, 62);
+    font-family: "Google Sans", "Roboto", Arial, sans-serif;
+    line-height: 160%;
+    animation-delay: 0.5s;
+    animation: fade-left 1s ease-out forwards;
+    /* background-color: rgba(250, 250, 250, 0.3); */
+  }
+  .red {
+    color: rgb(170, 7, 7);
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(10%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-up {
+    0% {
+      transform: translateY(10%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  @font-face {
+    font-family: myWeddingFont;
+    src: url("fonts/dancing_script.ttf");
+  }
+
+  .gi-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+  .gi-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    background-image: url("./images/information_bck2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: myWeddingFont;
+  }
+  .gi-title {
+    align-self: center;
+    font-family: myWeddingFont;
+    margin-bottom: 4rem;
+    font-size: 48px;
+    animation-delay: 0.5s;
+    animation: fade-up 1s ease-out forwards;
+  }
+  .gi-description {
+    margin: 0px 40px 0px 40px;
+    color: rgb(62, 62, 62);
+    font-family: "Google Sans", "Roboto", Arial, sans-serif;
+    line-height: 160%;
+    animation-delay: 0.5s;
+    animation: fade-left 1s ease-out forwards;
+    /* background-color: rgba(250, 250, 250, 0.3); */
+  }
+  .red {
+    color: rgb(170, 7, 7);
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(10%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-up {
+    0% {
+      transform: translateY(10%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+}

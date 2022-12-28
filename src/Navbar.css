@@ -1,0 +1,54 @@
+@media only screen and (max-width: 599px) {
+  @font-face {
+    font-family: myWeddingFont;
+    src: url("fonts/dancing_script.ttf");
+  }
+  .nb-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 3;
+  }
+  .menu {
+    background-color: rgba(40, 40, 40);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style-type: none;
+    border-color: rgb(170, 7, 7);
+    border-width: 1rem;
+    margin: 0 0 0 0;
+    z-index: 3;
+  }
+  .menu-no-display {
+    display: none;
+  }
+  .menu-display {
+    width: 100%;
+    inset: 0;
+  }
+
+  .menu-item {
+    height: 100%;
+    font-size: 2rem;
+    align-items: center;
+    font-family: myWeddingFont;
+    color: rgb(240, 240, 240);
+  }
+  .menu-item > p {
+    box-sizing: border-box;
+  }
+  .menu-item:hover {
+    color: rgb(170, 7, 7);
+    cursor: pointer;
+  }
+  .menu-button {
+    color: white;
+    align-self: flex-end;
+  }
+}

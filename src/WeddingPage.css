@@ -1,0 +1,36 @@
+@font-face {
+  font-family: myWeddingFont;
+  src: url("fonts/dancing_script.ttf");
+}
+.wp-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wp-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.wp-section > .wp-time {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  margin: 0 0 0 0;
+  box-sizing: border-box;
+}
+.wp-section > .wp-event-title {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.wp-section > .wp-event-description {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+@media only screen and (max-width: 599px) {
+  .wp-section > .wp-time {
+    width: 100%;
+  }
+}
