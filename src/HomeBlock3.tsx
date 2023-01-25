@@ -16,27 +16,18 @@ const HomeBlock3 = () => {
   return (
     <div className="hb3-main">
       <button
-        className="item item1"
+        className="item"
         onClick={(e) => handleClose(e, "/wedding-information")}
       >
         Jour du Mariage
       </button>
-      <button
-        className="item item2"
-        onClick={(e) => handleClose(e, "/road-trip")}
-      >
+      <button className="item" onClick={(e) => handleClose(e, "/road-trip")}>
         Voyage
       </button>
-      <button
-        className="item item3"
-        onClick={(e) => handleClose(e, "/information")}
-      >
+      <button className="item" onClick={(e) => handleClose(e, "/information")}>
         Hoi An / Danang
       </button>
-      <button
-        className="item item4"
-        onClick={(e) => handleClose(e, "/contacts")}
-      >
+      <button className="item" onClick={(e) => handleClose(e, "/contacts")}>
         Contacts
       </button>
     </div>

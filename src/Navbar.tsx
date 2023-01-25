@@ -14,62 +14,16 @@ import { Menu, MenuItem, IconButton } from "@material-ui/core";
 import { red } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
-  menu: {
-    backgroundColor: "rgba(25,25,25,0.8)",
-    width: "100%",
-    height: "100%",
-    zIndex: 1,
-    overflowX: "hidden",
-    padding: 0,
-    listStyleType: "none",
-  },
-  menu_item: {
-    backgroundColor: "(rgb (25,25,25))",
-    boxSizing: "border-box",
-    opacity: 100,
-    justifyContent: "center",
-    fontFamily: "inherit",
-    color: "black",
-    fontSize: "1.5rem",
-    padding: "auto auto auto auto",
-    "&:hover": {
-      color: "rgb(170,7,7)",
-      cursor: "pointer",
-      backgroundColor: red[50],
-    },
-  },
   menu_button: {
     margin: "1rem 1rem 1rem 1rem",
-    color: "rgb(170,7,7)",
+    color: "white",
     alignSelf: "flex-end",
     "&:hover": {
-      color: "rgb(240,7,7)",
+      color: "white",
     },
-  },
-  menu_item_close: {
-    boxSizing: "border-box",
-    opacity: 100,
-    justifyContent: "flex-end",
-    fontFamily: "inherit",
-    color: "black",
-    fontSize: "1.5rem",
-    "&:hover": {
-      backgroundColor: "white",
+    [theme.breakpoints.up(600)]: {
+      display: "none",
     },
-  },
-  close_button: {
-    color: "rgb(170,7,7)",
-    height: "3rem",
-    width: "3rem",
-    "&:hover": {
-      color: "rgb(170,7,7)",
-      cursor: "pointer",
-      backgroundColor: red[50],
-    },
-  },
-  close_icon: {
-    width: "2rem",
-    height: "2rem",
   },
 }));
 
@@ -77,22 +31,7 @@ function NavBar() {
   const classes = useStyles();
   const navigate = useNavigate();
   const [menuHidden, setMenuHidden] = useState<boolean>(true);
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-
-  // const menuOpenClose = (e: React.MouseEvent<HTMLElement>) => {
-  //   setAnchorEl(e.currentTarget);
-  //   return;
-  // };
-
-  // const handleClose = (e: React.MouseEvent<HTMLElement>, path: string) => {
-  //   setAnchorEl(null);
-  //   navigate(path);
-  // };
-
-  // const backdropClick = (e: React.MouseEvent<HTMLElement>) => {
-  //   setAnchorEl(null);
-  // };
+  const [vpWidth, setVPWidth] = useState<number>(window.innerWidth);
 
   const menuOpen = (e: React.MouseEvent<HTMLElement>) => {
     setMenuHidden(false);
@@ -112,8 +51,21 @@ function NavBar() {
     navigate(path);
   };
 
-  useEffect(() => {}, [menuHidden]);
+  useEffect(() => {
+    let isMounted = true;
+    const updateWidth = () => {
+      if (isMounted) {
+        setVPWidth(window.innerWidth);
+      }
+    };
 
+    window.addEventListener("resize", updateWidth);
+    return () => {
+      isMounted = false;
+
+      window.removeEventListener("resize", updateWidth);
+    };
+  }, [menuHidden]);
   return (
     <div className="nb-main">
       <IconButton
@@ -125,33 +77,34 @@ function NavBar() {
         <MenuIcon fontSize="large" />
       </IconButton>
 
-      <ul className={menuHidden ? "menu menu-no-display" : "menu menu-display"}>
-        <li className="menu-item">
-          <p>
-            <IconButton className={classes.close_button} onClick={menuClose}>
-              <CloseIcon fontSize="large" />
-            </IconButton>
-          </p>
-        </li>
-        <li className="menu-item" onClick={(e) => handleClose(e, "/")}>
-          <p>Home</p>
-        </li>
-        <li
+      <div
+        className={menuHidden ? "menu menu-no-display" : "menu menu-display"}
+      >
+        <button id="close-button" className="menu-item" onClick={menuClose}>
+          <CloseIcon fontSize="large" />
+        </button>
+        <button className="menu-item" onClick={(e) => handleClose(e, "/")}>
+          Home
+        </button>
+        <button
           className="menu-item"
           onClick={(e) => handleClose(e, "/wedding-information")}
         >
-          <p>Wedding</p>
-        </li>
-        <li
+          Wedding
+        </button>
+        <button
           className="menu-item"
           onClick={(e) => handleClose(e, "/information")}
         >
-          <p>Information</p>
-        </li>
-        <li className="menu-item" onClick={(e) => handleClose(e, "/contacts")}>
-          <p>Contacts</p>
-        </li>
-      </ul>
+          Information
+        </button>
+        <button
+          className="menu-item"
+          onClick={(e) => handleClose(e, "/contacts")}
+        >
+          Contacts
+        </button>
+      </div>
     </div>
   );
 }

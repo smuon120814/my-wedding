@@ -1,7 +1,11 @@
+.home {
+  width: 100%;
+}
+
 @media only screen and (max-width: 767px) {
   .home {
     /* vertical-align: baseline; */
-    width: 100%;
+
     display: flex;
     flex-direction: column;
     background-color: rgb(40, 40, 40);

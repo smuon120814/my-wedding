@@ -1,17 +1,57 @@
-@media only screen and (max-width: 599px) {
-  @font-face {
-    font-family: myWeddingFont;
-    src: url("fonts/dancing_script.ttf");
-  }
+@font-face {
+  font-family: BaskerVilleFont;
+  src: url("fonts/Baskervville-Regular.ttf");
+}
+
+@font-face {
+  font-family: AlissonScript;
+  src: url("fonts/Allison_Script.otf");
+}
+
+.nb-main {
+  width: 100%;
+  display: flex;
+}
+
+@media only screen and (min-width: 600px) {
   .nb-main {
-    width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+  }
+  .menu {
+    display: grid;
+    grid-column: 3/4;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-item {
+    background-color: rgba(245, 245, 245, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 1rem;
+    font-family: BaskerVilleFont;
+    padding: 1rem 0 1rem 0;
+  }
+  .menu-item:hover {
+    background-color: rgba(245, 245, 245, 0.2);
+    cursor: pointer;
+  }
+  #close-button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .nb-main {
     flex-direction: column;
     justify-content: flex-end;
     z-index: 3;
   }
   .menu {
-    background-color: rgba(40, 40, 40);
+    background-color: rgb(240, 240, 240);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -20,7 +60,7 @@
     top: 0;
     left: 0;
     list-style-type: none;
-    border-color: rgb(170, 7, 7);
+    border-color: #007a5d;
     border-width: 1rem;
     margin: 0 0 0 0;
     z-index: 3;
@@ -35,16 +75,20 @@
 
   .menu-item {
     height: 100%;
+    width: 100%;
     font-size: 2rem;
     align-items: center;
     font-family: myWeddingFont;
-    color: rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
+    border: none;
+    color: #007a5d;
   }
   .menu-item > p {
     box-sizing: border-box;
   }
   .menu-item:hover {
-    color: rgb(170, 7, 7);
+    background-color: #528d7f;
+    color: rgb(240, 240, 240);
     cursor: pointer;
   }
   .menu-button {

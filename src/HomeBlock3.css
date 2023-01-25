@@ -1,72 +1,36 @@
 :root {
-  --menu-item-1-color: rgb(200, 0, 0);
-  --menu-item-2-color: rgb(0, 154, 87);
-  --menu-item-3-color: rgb(213, 154, 90);
-  --menu-item-4-color: rgb(125, 94, 190);
-  --menu-item-bcgcolor-white: rgb(245, 245, 245);
-  --menu-item-color-black: rgb (20, 20, 20);
+  --hb3-lightpink: #e7c0b0;
+  --hb3-green: #007a5d;
+  --hb3-light-green: #00bb8f;
 }
 
 .hb3-main {
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  background-color: rgb(2, 1, 56);
 }
 
 .item {
   border-style: solid;
   justify-items: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
-.item1 {
   border-color: var(--menu-item-bcgcolor-white);
-  color: var(--menu-item-bcgcolor-white);
-}
-
-.item2 {
-  border-color: var(--menu-item-bcgcolor-white);
-  color: var(--menu-item-bcgcolor-white);
-}
-
-.item3 {
-  border-color: var(--menu-item-bcgcolor-white);
-  color: var(--menu-item-bcgcolor-white);
-}
-
-.item4 {
-  border-color: var(--menu-item-bcgcolor-white);
-  color: var(--menu-item-bcgcolor-white);
+  background-color: var(--hb3-green);
+  color: var(--hb3-lightpink);
 }
 
 .item:hover {
   cursor: pointer;
+  /* box-shadow: 0px 0px 30px 10px var(--hb3-light-green); */
+  color: var(--hb3-green);
+  background-color: var(--hb3-lightpink);
 }
 
-.item1:hover {
-  background-color: var(--menu-item-bcgcolor-white);
-  color: var(--menu-item-color-black);
-  box-shadow: 0px 0px 30px 10px var(--menu-item-bcgcolor-white);
-}
-
-.item2:hover {
-  background-color: var(--menu-item-bcgcolor-white);
-  color: var(--menu-item-color-black);
-  box-shadow: 0px 0px 30px 10px var(--menu-item-bcgcolor-white);
-}
-.item3:hover {
-  background-color: var(--menu-item-bcgcolor-white);
-  color: var(--menu-item-color-black);
-  box-shadow: 0px 0px 30px 10px var(--menu-item-bcgcolor-white);
-}
-.item4:hover {
-  background-color: var(--menu-item-bcgcolor-white);
-  color: var(--menu-item-color-black);
-  box-shadow: 0px 0px 30px 10px var(--menu-item-bcgcolor-white);
+@media only screen and (min-width: 1367px) {
+  .hb3-main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: var(--hb3-green);
+  }
 }
 
 @media only screen and (max-width: 599px) {
@@ -74,6 +38,9 @@
     column-gap: 32px;
     row-gap: 32px;
     padding: 40px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--hb3-green);
   }
   .item {
     border-width: 2px;

@@ -1,7 +1,6 @@
 {
   "name": "my-wedding",
   "version": "0.1.0",
-  "homepage": "https://smuon120814.github.io/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -19,6 +18,7 @@
     "@types/node": "^16.11.62",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "firebase-tools": "^11.19.0",
     "google-map-react": "^2.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -30,10 +30,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "firebase build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

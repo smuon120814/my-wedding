@@ -15,7 +15,7 @@ function Home() {
   return (
     <div className="home">
       <HomeBlock1 />
-      <HomeBlock3 />
+      {/* <HomeBlock3 /> */}
       {/* <DateAndLocation /> */}
       {/* <HoiAn /> */}
     </div>
