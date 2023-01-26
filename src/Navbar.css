@@ -64,6 +64,7 @@
     border-width: 1rem;
     margin: 0 0 0 0;
     z-index: 3;
+    padding-bottom: 60px;
   }
   .menu-no-display {
     display: none;
@@ -78,7 +79,7 @@
     width: 100%;
     font-size: 2rem;
     align-items: center;
-    font-family: myWeddingFont;
+    font-family: BaskerVilleFont;
     background-color: rgb(240, 240, 240);
     border: none;
     color: #007a5d;
@@ -92,7 +93,12 @@
     cursor: pointer;
   }
   .menu-button {
-    color: white;
     align-self: flex-end;
+  }
+  #close-button {
+    height: 80px;
+    width: 80px;
+    box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
   }
 }

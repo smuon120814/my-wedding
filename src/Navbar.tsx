@@ -11,15 +11,15 @@ import "./Navbar.css";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Menu, MenuItem, IconButton } from "@material-ui/core";
-import { red } from "@material-ui/core/colors";
+import { red, teal } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
   menu_button: {
     margin: "1rem 1rem 1rem 1rem",
-    color: "white",
+    color: "#007a5d",
     alignSelf: "flex-end",
     "&:hover": {
-      color: "white",
+      color: "#528d7f",
     },
     [theme.breakpoints.up(600)]: {
       display: "none",

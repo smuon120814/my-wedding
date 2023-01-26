@@ -72,7 +72,7 @@ const FoodInformationOverview = () => {
       <div className="fio-header">
         <Navbar />
         <h1 className="fio-title">
-          <span className="green">Food &#38; Beverages</span>
+          <span>Food &#38; Beverages</span>
         </h1>
         <p className="gi-description">The good taste of Vietnam</p>
       </div>

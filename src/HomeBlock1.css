@@ -27,9 +27,6 @@
   flex-direction: column;
   font-family: AlissonScript;
 }
-.pink {
-  color: #e7c0b0;
-}
 
 .bottom {
   display: flex;
@@ -47,6 +44,9 @@
   font-weight: inherit;
   animation: slide-down 2s ease-out forwards;
   margin-bottom: 0px;
+}
+.title > span {
+  color: #e7c0b0;
 }
 
 .wedding {
@@ -150,9 +150,6 @@
       filter: none;
     }
   }
-  .red {
-    color: rgb(170, 7, 7);
-  }
 
   .title {
     /* font-weight: inherit; */
@@ -240,9 +237,6 @@
     100% {
       filter: none;
     }
-  }
-  .red {
-    color: rgb(170, 7, 7);
   }
 
   .title {

@@ -41,27 +41,27 @@ const info_content: {
 
 const InformationOverview = () => {
   return (
-    <div className="gi-main">
-      <div className="gi-header">
+    <div className="io-main">
+      <div className="io-header">
         <Navbar />
-        <h1 className="gi-title">
-          <span className="red">Information</span>
-        </h1>
-        <p className="gi-description">
+        <h1 className="io-title">Information</h1>
+        <p className="io-description">
           Quelque bonnes addresses et bon conseils pour bien pr&#233;parer votre
           s&#233;jour au Vietnam
         </p>
       </div>
 
-      {info_content.map((info_item, index) => (
-        <InformationItem
-          category={info_item.category}
-          text={info_item.text}
-          url={info_item.url}
-          img_url={info_item.img_url}
-          key={index}
-        ></InformationItem>
-      ))}
+      <div className="io-body">
+        {info_content.map((info_item, index) => (
+          <InformationItem
+            category={info_item.category}
+            text={info_item.text}
+            url={info_item.url}
+            img_url={info_item.img_url}
+            key={index}
+          ></InformationItem>
+        ))}
+      </div>
     </div>
   );
 };

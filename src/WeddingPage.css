@@ -1,36 +1,208 @@
 @font-face {
-  font-family: myWeddingFont;
-  src: url("fonts/dancing_script.ttf");
+  font-family: BaskerVilleFont;
+  src: url("fonts/Baskervville-Regular.ttf");
 }
+
+@font-face {
+  font-family: AlissonScript;
+  src: url("fonts/Allison_Script.otf");
+}
+
+/* MAIN BLOCK */
 .wp-main {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: black;
+}
+
+/* HEADER */
+.wp-header {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(245, 245, 245);
+  color: #e6a991;
+}
+.wp-header > h1 {
+  font-family: AlissonScript;
+  color: #007a5d;
+  animation-delay: 0.5s;
+  animation: fade-left 1s ease-out forwards;
+}
+.wp-header > p {
+  font-family: BaskerVilleFont;
+  animation-delay: 0.5s;
+  animation: fade-up 1s ease-out forwards;
+}
+
+/* LOCATION VENUE BLOCK */
+.wp-venue-block {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  background-color: #ffe9e0;
+}
+.wp-venue-block > h2 {
+  text-align: left;
+  font-family: BaskerVilleFont;
+  color: #e6a991;
+}
+.wp-venue-block > .wp-venue-location-name {
+  font-family: BaskerVilleFont;
+  color: #007a5d;
 }
 
-.wp-section {
+.wp-venue-block > .wp-venue-location-address {
+  font-family: BaskerVilleFont;
+  color: black;
+  text-align: left;
+}
+.wp-venue-block > a > .wp-venue-image {
+  display: block;
+  width: 100%;
+  object-fit: scale-down;
+  cursor: pointer;
+}
+
+.wp-venue-block > .wp-venue-location-description {
+  font-family: BaskerVilleFont;
+  color: black;
+  text-align: left;
+}
+.wp-venue-block > .wp-venue-location-description > li {
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+/* TIMELINE BLOCK */
+
+.wp-timeline-block {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: rgb(250, 250, 250);
+}
+.wp-timeline-block > h2 {
+  text-align: left;
+  font-family: BaskerVilleFont;
+  color: #e6a991;
+}
+
+.wp-event {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
+  font-family: BaskerVilleFont;
 }
-.wp-section > .wp-time {
-  grid-column: 1/2;
-  grid-row: 1/3;
-  margin: 0 0 0 0;
-  box-sizing: border-box;
+.wp-event:before {
+  content: attr(data-date);
+  text-align: left;
+  color: #007a5d;
 }
-.wp-section > .wp-event-title {
+
+.wp-event > .wp-event-title {
   grid-column: 2/3;
   grid-row: 1/2;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #007a5d;
 }
-.wp-section > .wp-event-description {
+.wp-event > .wp-event-description {
   grid-column: 2/3;
   grid-row: 2/3;
+  text-align: left;
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 599px) {
-  .wp-section > .wp-time {
+  /* HEADER */
+  .wp-header {
+    padding-bottom: 40px;
+  }
+  .wp-header > h1 {
+    font-size: 54px;
+  }
+  .wp-header > p {
+    font-weight: 600;
+  }
+
+  /* LOCATION VENUE BLOCK */
+  .wp-venue-block {
     width: 100%;
+    padding: 20px;
+  }
+
+  .wp-venue-block > .wp-venue-location-name {
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  .wp-venue-block > .wp-venue-location-address {
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .wp-venue-block > a > .wp-venue-image {
+    margin-bottom: 20px;
+  }
+
+  .wp-venue-block > .wp-venue-location-description {
+    font-size: 12px;
+    padding-left: 0px;
+  }
+  .wp-venue-block > .wp-venue-location-description > li {
+    padding-left: 0px;
+  }
+
+  /* TIMELINE BLOCK */
+  .wp-timeline-block {
+    width: 100%;
+    padding: 20px;
+  }
+  .wp-event {
+    margin-bottom: 40px;
+  }
+  .wp-event:before {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .wp-event > .wp-event-title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .wp-event > .wp-event-description {
+    font-size: 12px;
   }
 }
