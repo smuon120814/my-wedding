@@ -14,6 +14,7 @@ const WeddingPage = () => {
       <header className="wp-header">
         <Navbar />
         <h1>Wedding Day</h1>
+        <h1>08.08.2023</h1>
         <p>Celebrate this special day with us</p>
       </header>
 

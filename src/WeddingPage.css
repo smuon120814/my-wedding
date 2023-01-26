@@ -154,6 +154,10 @@
   .wp-header > h1 {
     font-size: 54px;
   }
+  .wp-header > h1:nth-child(4) {
+    font-size: 54px;
+    margin: 0px;
+  }
   .wp-header > p {
     font-weight: 600;
   }
@@ -176,6 +180,8 @@
 
   .wp-venue-block > a > .wp-venue-image {
     margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 30px 5px rgba(142, 142, 142, 0.5);
   }
 
   .wp-venue-block > .wp-venue-location-description {
