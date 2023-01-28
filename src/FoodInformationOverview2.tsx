@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // components
-import FoodInformationItem from "./FoodInformationItem";
+import InformationItem2 from "./InformationItem2";
 import Navbar from "./Navbar";
 
 // styles
@@ -70,7 +70,6 @@ const FoodInformationOverview = () => {
 
   return (
     <div className="fio-main">
-      {/* HEADER */}
       <div className="fio-header">
         <Navbar />
         <div className="fio-title">
@@ -80,34 +79,33 @@ const FoodInformationOverview = () => {
             <span>B</span>everage
           </h1>
         </div>
+
         <p className="fio-description">
           The authentic taste of <span>Vietnam</span>
         </p>
       </div>
-
-      {/* BODY */}
       <div className="fio-btn-city">
         <h2>Hội An</h2>
         {items[0].content.map(({ name, category, url, img_url }, index) => (
-          <FoodInformationItem
-            name={name}
-            category={category}
+          <InformationItem2
+            category={name}
+            text={category}
             url={url}
             img_url={img_url}
             key={index}
-          ></FoodInformationItem>
+          ></InformationItem2>
         ))}
       </div>
       <div className="fio-btn-city">
-        <h2>Da Nang</h2>
+        <h2>Danang</h2>
         {items[1].content.map(({ name, category, url, img_url }, index) => (
-          <FoodInformationItem
-            name={name}
-            category={category}
+          <InformationItem2
+            category={name}
+            text={category}
             url={url}
             img_url={img_url}
             key={index}
-          ></FoodInformationItem>
+          ></InformationItem2>
         ))}
       </div>
     </div>

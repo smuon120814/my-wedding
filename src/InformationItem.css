@@ -1,39 +1,55 @@
-@media only screen and (max-width: 600px) {
-  @font-face {
-    font-family: myWeddingFont;
-    src: url("fonts/dancing_script.ttf");
-  }
+/* FONT FAMILY */
+@font-face {
+  font-family: BaskerVilleFont;
+  src: url("fonts/Baskervville-Regular.ttf");
+}
+
+@font-face {
+  font-family: AlissonScript;
+  src: url("fonts/Allison_Script.otf");
+}
+
+.ii-card {
+  box-sizing: border-box;
+  display: flex;
+  background-size: cover;
+  color: rgb(245, 245, 245);
+  text-decoration: none;
+}
+.ii-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-start;
+  z-index: 1;
+}
+
+.ii-card-content-title {
+  align-self: flex-start;
+  text-align: left;
+  font-family: AlissonScript;
+}
+.ii-card-content-text {
+  align-self: flex-start;
+  text-align: left;
+  font-family: BaskerVilleFont;
+}
+
+@media only screen and (max-width: 599px) {
   .ii-card {
-    /* width: 90%; */
-    box-sizing: border-box;
-    /* height: 400px; */
-    display: flex;
-    border-radius: 36px;
-    background-size: cover;
-    color: white;
-    text-decoration: none;
-    margin: 0px 40px 24px 40px;
+    border-radius: 12px;
+    margin: 0px 20px 24px 20px;
     padding: 40% 0 0 0;
     box-shadow: 2px 2px 30px 5px rgba(142, 142, 142, 0.5);
   }
   .ii-card-content {
-    display: flex;
-
-    flex-direction: column;
-    justify-content: flex-end;
-    align-content: flex-start;
     margin: 10px 30px 10px 30px;
-    z-index: 1;
-  }
-  .red {
-    color: rgb(255, 57, 57);
   }
   .ii-card-content-title {
-    align-self: flex-start;
     margin-bottom: 0px;
-    text-align: left;
     max-width: 250px;
-    font-family: myWeddingFont;
+    font-size: 48px;
+    font-weight: 400;
   }
   .ii-card-content-text {
     align-self: flex-start;

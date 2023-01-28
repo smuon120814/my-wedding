@@ -50,7 +50,7 @@
 }
 .wp-venue-block > h2 {
   text-align: left;
-  font-family: BaskerVilleFont;
+  font-family: AlissonScript;
   color: #e6a991;
 }
 .wp-venue-block > .wp-venue-location-name {
@@ -91,7 +91,7 @@
 }
 .wp-timeline-block > h2 {
   text-align: left;
-  font-family: BaskerVilleFont;
+  font-family: AlissonScript;
   color: #e6a991;
 }
 
@@ -167,6 +167,9 @@
     width: 100%;
     padding: 20px;
   }
+  .wp-venue-block > h2 {
+    font-size: 40px;
+  }
 
   .wp-venue-block > .wp-venue-location-name {
     font-weight: 600;
@@ -174,11 +177,11 @@
   }
 
   .wp-venue-block > .wp-venue-location-address {
-    font-weight: 600;
     font-size: 12px;
   }
 
   .wp-venue-block > a > .wp-venue-image {
+    margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 30px 5px rgba(142, 142, 142, 0.5);
@@ -197,6 +200,11 @@
     width: 100%;
     padding: 20px;
   }
+
+  .wp-timeline-block > h2 {
+    font-size: 40px;
+  }
+
   .wp-event {
     margin-bottom: 40px;
   }

@@ -16,7 +16,8 @@ import { red, teal } from "@material-ui/core/colors";
 const useStyles = makeStyles((theme) => ({
   menu_button: {
     margin: "1rem 1rem 1rem 1rem",
-    color: "#007a5d",
+    color: "rgb(245,245,245)",
+    backgroundColor: "rgba(230, 169, 145, 0.6)",
     alignSelf: "flex-end",
     "&:hover": {
       color: "#528d7f",

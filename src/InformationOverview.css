@@ -77,7 +77,7 @@
     font-size: 60px;
   }
   .io-description {
-    margin: 0px 40px 0px 40px;
+    margin: 0px 40px 40px 40px;
     line-height: 160%;
   }
 }

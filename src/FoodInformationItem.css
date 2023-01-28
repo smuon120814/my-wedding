@@ -1,0 +1,52 @@
+/* FONT FAMILY */
+@font-face {
+  font-family: BaskerVilleFont;
+  src: url("fonts/Baskervville-Regular.ttf");
+}
+
+@font-face {
+  font-family: AlissonScript;
+  src: url("fonts/Allison_Script.otf");
+}
+
+.fii-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: white;
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+}
+.fii-card > h1 {
+  align-self: flex-start;
+  text-align: left;
+  color: #007a5d;
+  margin: 0px;
+  font-family: BaskerVilleFont;
+}
+.fii-card > p {
+  margin: 0px;
+}
+.fii-card-price {
+  color: rgb(200, 200, 200);
+}
+.fii-card-price > span {
+  margin: 0px;
+  color: #007a5d;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 599px) {
+  .fii-card {
+    margin: 0px 20px 2px 20px;
+  }
+  .fii-card > h1 {
+    font-size: 14px;
+  }
+  .fii-card > p {
+    font-size: 12px;
+  }
+}

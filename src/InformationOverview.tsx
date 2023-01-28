@@ -45,11 +45,13 @@ const InformationOverview = () => {
       <div className="io-header">
         <Navbar />
         <h1 className="io-title">Information</h1>
-        <p className="io-description">
-          Quelque bonnes addresses et bon conseils pour bien pr&#233;parer votre
-          s&#233;jour au Vietnam
-        </p>
       </div>
+
+      <p className="io-description">
+        Some good tips to help you enjoy your stay in Hội An and Da Nang
+        {/* Quelques bonnes addresses et bon conseils pour bien pr&#233;parer votre
+        s&#233;jour au Vietnam */}
+      </p>
 
       <div className="io-body">
         {info_content.map((info_item, index) => (

@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 // Style
 import "./WeddingPage.css";
 import VenueLocation from "./images/venue-location.jpg";
+import PlaceIcon from "@mui/icons-material/Place";
 
 const WeddingPage = () => {
   return (
@@ -27,10 +28,14 @@ const WeddingPage = () => {
             The Palm Garden Beach Resort Hoi An
           </p>
           <p className="wp-venue-location-address">
-            Address : Lac Long Quan, Cua Dai Beach, Cam An, Hội An, Vietnam
+            <PlaceIcon /> Lac Long Quan, Cua Dai Beach, Cam An, Hội An
           </p>
           <a href="https://www.google.com/maps?q=the+palm+resort+hoi+an&um=1&ie=UTF-8&sa=X&ved=2ahUKEwik4v3uheX8AhVoVKQEHS0QAJYQ_AUoAXoECAEQAw">
-            <img className="wp-venue-image" src={VenueLocation} />
+            <img
+              className="wp-venue-image"
+              src={VenueLocation}
+              alt="Venue google map link"
+            />
           </a>
           <ul className="wp-venue-location-description">
             The Palm Garden is a beach front resort which is located:
