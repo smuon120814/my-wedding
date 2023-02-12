@@ -1,0 +1,305 @@
+/* FONT FAMILY */
+@font-face {
+  font-family: BaskerVilleFont;
+  src: url("fonts/Baskervville-Regular.ttf");
+}
+
+@font-face {
+  font-family: AlissonScript;
+  src: url("fonts/Allison_Script.otf");
+}
+
+.ac-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(245, 245, 245);
+}
+
+.ac-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("./images/hotel.jpg");
+  background-size: cover;
+}
+.ac-title {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  font-family: AlissonScript;
+  animation: fade-up 1s ease-out forwards;
+  color: rgb(245, 245, 245);
+}
+.ac-title > h1 > span {
+  color: #e6a991;
+}
+
+.ac-description {
+  margin: 0px 40px 0px 40px;
+  font-family: BaskerVilleFont;
+  color: #e6a991;
+  animation-delay: 0.5s;
+  animation: fade-left 1s ease-out forwards;
+}
+.ac-title > span {
+  color: #e6a991;
+}
+
+.ac-special-price {
+  background-color: #007a5d;
+}
+.ac-special-price > h2 {
+  font-family: AlissonScript;
+  color: rgb(245, 245, 245);
+  text-align: left;
+}
+
+.ac-special-price > p {
+  box-sizing: border-box;
+  font-family: BaskerVilleFont;
+  color: rgb(245, 245, 245);
+}
+.ac-special-price > p > span {
+  color: #e6a991;
+}
+.ac-special-price > p:nth-child(4) {
+  text-align: right;
+  padding: 0px;
+}
+.ac-special-price > table {
+  font-family: BaskerVilleFont;
+  border-collapse: collapse;
+  text-align: left;
+}
+.ac-special-price > table > tr:nth-child(even) {
+  background-color: white;
+  color: black;
+}
+.ac-special-price > table > tr:nth-child(odd) {
+  background-color: rgb(220, 220, 220);
+  color: black;
+}
+.ac-special-price > table > tr:nth-child(1) {
+  background-color: #e6a991;
+  color: white;
+}
+.ac-text {
+  font-family: BaskerVilleFont;
+}
+
+.ac-location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .ac-title > h1 {
+    font-size: 4em;
+    font-weight: 400;
+    margin-bottom: 0px;
+  }
+  .ac-description {
+    margin: 60px 80px 60px 80px;
+    line-height: 160%;
+  }
+  .ac-special-price {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    padding-bottom: 60px;
+  }
+  .ac-special-price > h2 {
+    font-size: 3em;
+    font-weight: 400;
+    grid-column: 2/3;
+  }
+  .ac-special-price > p {
+    font-size: 0.9em;
+    text-align: justify;
+    grid-column: 2/3;
+  }
+  .ac-special-price > p > span {
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+  .ac-special-price > table {
+    width: 100%;
+    grid-column: 2/3;
+  }
+  .ac-special-price > table > tr > td {
+    padding: 6px 10px 6px 10px;
+    font-size: 0.9em;
+  }
+  .ac-special-price > table > tr:nth-child(1) > th {
+    padding: 6px 10px 6px 10px;
+    font-size: 0.9em;
+  }
+  .ac-text {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+  .ac-text > p {
+    text-align: justify;
+    font-size: 1em;
+    grid-column: 2/3;
+  }
+  .ac-text > p > span {
+    font-weight: 600;
+  }
+  .ac-location {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    padding: 60px 0px 60px 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .ac-title > h1 {
+    font-size: 4em;
+    font-weight: 400;
+    margin-bottom: 0px;
+  }
+  .ac-description {
+    margin: 60px 80px 60px 80px;
+    line-height: 160%;
+  }
+  .ac-special-price {
+    padding: 60px;
+  }
+  .ac-special-price > h2 {
+    font-size: 3em;
+    margin: 0px;
+    font-weight: 400;
+  }
+  .ac-special-price > p {
+    font-size: 0.9em;
+    text-align: justify;
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+  .ac-special-price > p > span {
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+  .ac-special-price > table {
+    width: 100%;
+  }
+  .ac-special-price > table > tr > td {
+    padding: 6px 10px 6px 10px;
+    font-size: 0.9em;
+  }
+  .ac-special-price > table > tr:nth-child(1) > th {
+    padding: 6px 10px 6px 10px;
+    font-size: 0.9em;
+  }
+  .ac-text {
+    padding: 80px 60px 80px 60px;
+    font-size: 1em;
+  }
+  .ac-text > p {
+    margin: 0px;
+    text-align: justify;
+    font-size: 1em;
+  }
+  .ac-text > p > span {
+    font-weight: 600;
+  }
+  .ac-location {
+    padding: 60px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ac-header {
+    padding-bottom: 40px;
+  }
+  .ac-title {
+    margin-bottom: 1rem;
+  }
+  .ac-title > h1 {
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .ac-special-price {
+    padding: 40px;
+  }
+  .ac-special-price > h2 {
+    font-size: 48px;
+    margin: 0px;
+    font-weight: 400;
+  }
+  .ac-special-price > p {
+    font-size: 14px;
+    text-align: justify;
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+  .ac-special-price > p > span {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .ac-special-price > table > tr > td {
+    padding: 6px 10px 6px 10px;
+    font-size: 14px;
+  }
+  .ac-special-price > table > tr:nth-child(1) > th {
+    padding: 6px 10px 6px 10px;
+    font-size: 14px;
+  }
+  .ac-text {
+    padding: 40px 40px 40px 40px;
+  }
+  .ac-text > p {
+    margin: 0px;
+    text-align: justify;
+    font-size: 16px;
+  }
+  .ac-text > p > span {
+    font-weight: 600;
+  }
+  .ac-gold-rule {
+    padding: 0px 40px 0px 40px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .ac-location {
+    padding: 40px;
+  }
+}

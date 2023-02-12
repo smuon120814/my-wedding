@@ -1,0 +1,97 @@
+/* FONT FAMILY */
+@font-face {
+  font-family: BaskerVilleFont;
+  src: url("fonts/Baskervville-Regular.ttf");
+}
+
+@font-face {
+  font-family: AlissonScript;
+  src: url("fonts/Allison_Script.otf");
+}
+
+.mei-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: rgb(245, 245, 245);
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  font-family: BaskerVilleFont;
+}
+.mei-card > h1 {
+  align-self: flex-start;
+  text-align: left;
+  color: #007a5d;
+  margin: 0px;
+}
+.mei-card-city {
+  text-align: left;
+}
+.mei-card-address {
+  text-align: left;
+}
+
+@media only screen and (min-width: 1024px) {
+  .mei-card {
+    border-radius: 10px;
+    width: 100%;
+  }
+  .mei-card > h1 {
+    font-size: 18px;
+  }
+  .mei-card-city {
+    margin: 0px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .mei-card-address {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .mei-card {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .mei-card > h1 {
+    font-size: 18px;
+  }
+  .mei-card-city {
+    margin: 0px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .mei-card-address {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .mei-card {
+    margin-bottom: 8px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .mei-card > h1 {
+    font-size: 14px;
+  }
+  .mei-card-city {
+    margin: 0px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .mei-card-address {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+}

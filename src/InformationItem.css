@@ -35,10 +35,34 @@
   font-family: BaskerVilleFont;
 }
 
-@media only screen and (max-width: 599px) {
+@media only screen and (min-width: 1024px) {
   .ii-card {
     border-radius: 12px;
-    margin: 0px 20px 24px 20px;
+    padding: 40% 0 0 0;
+    box-shadow: 2px 2px 30px 5px rgba(142, 142, 142, 0.5);
+  }
+  .ii-card:nth-child(odd) {
+    grid-column: 2/3;
+  }
+  .ii-card-content {
+    margin: 10px 30px 10px 30px;
+  }
+  .ii-card-content-title {
+    margin-bottom: 0px;
+    max-width: 250px;
+    font-size: 2em;
+    font-weight: 400;
+  }
+  .ii-card-content-text {
+    align-self: flex-start;
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .ii-card {
+    border-radius: 12px;
+    margin: 0px 40px 40px 40px;
     padding: 40% 0 0 0;
     box-shadow: 2px 2px 30px 5px rgba(142, 142, 142, 0.5);
   }
@@ -48,11 +72,33 @@
   .ii-card-content-title {
     margin-bottom: 0px;
     max-width: 250px;
-    font-size: 48px;
+    font-size: 2em;
     font-weight: 400;
   }
   .ii-card-content-text {
     align-self: flex-start;
-    text-align: left;
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ii-card {
+    border-radius: 12px;
+    margin: 0px 40px 40px 40px;
+    padding: 40% 0 0 0;
+    box-shadow: 2px 2px 30px 5px rgba(142, 142, 142, 0.5);
+  }
+  .ii-card-content {
+    margin: 10px 30px 10px 30px;
+  }
+  .ii-card-content-title {
+    margin-bottom: 0px;
+    max-width: 250px;
+    font-size: 3em;
+    font-weight: 400;
+  }
+  .ii-card-content-text {
+    align-self: flex-start;
+    font-size: 1em;
   }
 }

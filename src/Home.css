@@ -5,16 +5,6 @@
 @media only screen and (max-width: 767px) {
   .home {
     /* vertical-align: baseline; */
-
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(40, 40, 40);
-  }
-}
-
-@media only screen and (max-width: 599px) {
-  .home {
-    /* vertical-align: baseline; */
     width: 100%;
     display: flex;
     flex-direction: column;

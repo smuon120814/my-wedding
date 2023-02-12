@@ -1,0 +1,199 @@
+/* FONT FAMILY */
+@font-face {
+  font-family: BaskerVilleFont;
+  src: url("fonts/Baskervville-Regular.ttf");
+}
+
+@font-face {
+  font-family: AlissonScript;
+  src: url("fonts/Allison_Script.otf");
+}
+
+.co-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(245, 245, 245);
+}
+
+.co-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("./images/contact3.jpg");
+  background-size: cover;
+}
+.co-title {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  font-family: AlissonScript;
+  animation: fade-up 1s ease-out forwards;
+  color: rgb(245, 245, 245);
+}
+.co-title > h1 > span {
+  color: #e6a991;
+}
+
+.co-description {
+  margin: 0px 40px 0px 40px;
+  font-family: BaskerVilleFont;
+  color: rgb(245, 245, 245);
+  animation-delay: 0.5s;
+  animation: fade-left 1s ease-out forwards;
+}
+.co-text-block {
+  background-color: #e6a991;
+}
+
+.co-text {
+  font-family: BaskerVilleFont;
+  background-color: #e6a991;
+}
+
+.co-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: white;
+}
+.co-contact > p {
+  width: 100%;
+  text-align: justify;
+  font-family: BaskerVilleFont;
+}
+.co-contact > p > span {
+  color: #007a5d;
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .co-header {
+    padding-bottom: 60px;
+  }
+  .co-title > h1 {
+    font-size: 100px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .co-text-block {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+  .co-text {
+    grid-column: 2/3;
+    padding: 60px 0px 60px 0px;
+    margin: 0px;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .co-contact-block {
+    padding: 60px 0px 60px 0px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+  }
+  .co-contact:nth-child(1) {
+    grid-column: 2/3;
+  }
+  .co-contact {
+    padding: 60px;
+    border-radius: 10px;
+  }
+  .co-contact > p {
+    margin: 0px;
+    font-size: 18px;
+  }
+  .co-contact > p > span {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .co-header {
+    padding-bottom: 60px;
+  }
+  .co-title > h1 {
+    font-size: 100px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .co-text {
+    padding: 60px;
+    margin: 0px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .co-contact {
+    padding: 60px;
+  }
+  .co-contact > p {
+    margin: 0px;
+    font-size: 18px;
+  }
+  .co-contact > p > span {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .co-header {
+    padding-bottom: 40px;
+  }
+  .co-title > h1 {
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .co-text {
+    padding: 40px 40px 40px 40px;
+    margin: 0px;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .co-contact {
+    padding: 40px;
+  }
+  .co-contact > p {
+    margin: 0px;
+    font-size: 16px;
+  }
+  .co-contact > p > span {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}

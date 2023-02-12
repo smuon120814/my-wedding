@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 // Components
 import Navbar from "./Navbar";
-import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 
 // Style
 import "./HomeBlock1.css";
@@ -20,8 +19,7 @@ function HomeBlock1() {
         <h1 className="wedding">Wedding</h1>
       </div>
       <div className="bottom">
-        <h3 className="date">08.08.23 - Hoi An, Vietnam</h3>
-        {/* <KeyboardDoubleArrowDownIcon /> */}
+        <h3 className="date">08.08.23 - Hội An, Vietnam</h3>
       </div>
     </div>
   );

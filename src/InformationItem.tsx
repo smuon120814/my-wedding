@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect, useState, useRef } from "react";
 import InformationItemInterface from "./InformationItemInterface";
 import food_image from "./images/food.png";
 import accomodation_image from "./images/hotel.jpg";
@@ -30,14 +29,14 @@ const informationItem: React.FC<InformationItemInterface> = ({
     case "Transportation":
       selected_image = transportation_image;
       break;
-    case "Change Money":
+    case "Exchange Money":
       selected_image = changemoney_image;
       break;
   }
   // Define inline css for background Item
   // const selected_image = require("../../" + img_url);
   const aStyles: CSS.Properties = {
-    backgroundImage: `linear-gradient(to right,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.1)),url(${selected_image})`,
+    backgroundImage: `linear-gradient(to bottom,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.8)),url(${selected_image})`,
   };
 
   function reveal_text() {

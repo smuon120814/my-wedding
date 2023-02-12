@@ -1,9 +1,10 @@
 import React from "react";
-import FoodInformationItemInterface from "./FoodInformationItemInterface";
+import MoneyExchangeItemInterface from "./MoneyExchangeItemInterface";
 
 // Styles
-import "./FoodInformationItem.css";
+import "./MoneyExchangeItem.css";
 import PlaceIcon from "@mui/icons-material/Place";
+import StarIcon from "@mui/icons-material/Star";
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -18,26 +19,25 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const FoodInformationItem: React.FC<FoodInformationItemInterface> = ({
+const MoneyExchangeItem: React.FC<MoneyExchangeItemInterface> = ({
   name,
-  category,
-  description,
+  city,
   url,
-}: FoodInformationItemInterface) => {
+  address,
+  star,
+}: MoneyExchangeItemInterface) => {
   const classes = useStyles();
   return (
-    <a className="fii-card" href={url}>
+    <a className="mei-card" href={url}>
       <h1>
         {name}&nbsp;
         <PlaceIcon className={classes.placeIcon} />
+        {star ? <StarIcon /> : ""}
       </h1>
-      <p className="fii-card-category">{category}</p>
-      <p className="fii-card-description">{description}</p>
-      <p className="fii-card-price">
-        <span>$</span>$$
-      </p>
+      <p className="mei-card-city">{city}</p>
+      <p className="mei-card-address">{address}</p>
     </a>
   );
 };
 
-export default FoodInformationItem;
+export default MoneyExchangeItem;

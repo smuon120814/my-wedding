@@ -1,8 +1,8 @@
 import React from "react";
-import FoodInformationItemInterface from "./FoodInformationItemInterface";
+import AccomodationItemInterface from "./AccomodationItemInterface";
 
 // Styles
-import "./FoodInformationItem.css";
+import "./AccomodationItem.css";
 import PlaceIcon from "@mui/icons-material/Place";
 import { makeStyles } from "@material-ui/core";
 
@@ -18,26 +18,32 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const FoodInformationItem: React.FC<FoodInformationItemInterface> = ({
+const AccomodationItem: React.FC<AccomodationItemInterface> = ({
   name,
-  category,
-  description,
+  address,
   url,
-}: FoodInformationItemInterface) => {
+  price,
+  distance,
+  comments,
+}: AccomodationItemInterface) => {
   const classes = useStyles();
   return (
-    <a className="fii-card" href={url}>
+    <a className="aci-card" href={url}>
       <h1>
         {name}&nbsp;
         <PlaceIcon className={classes.placeIcon} />
       </h1>
-      <p className="fii-card-category">{category}</p>
-      <p className="fii-card-description">{description}</p>
-      <p className="fii-card-price">
-        <span>$</span>$$
+
+      <p className="aci-card-details">
+        <br />
+        Price (for two persons): {price} VND
+        <br />
+        Distance from wedding venue: {distance}
+        <br />
+        {comments}
       </p>
     </a>
   );
 };
 
-export default FoodInformationItem;
+export default AccomodationItem;

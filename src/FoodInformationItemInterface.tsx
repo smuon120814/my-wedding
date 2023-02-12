@@ -1,8 +1,8 @@
 interface InformationItemInterface {
   name: string;
   category: string;
+  description: string;
   url: string;
-  img_url: string;
   key: number;
 }
 

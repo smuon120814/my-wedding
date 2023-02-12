@@ -1,28 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { makeStyles } from "@material-ui/core";
 
 // Components
-import Logo from "./Logo";
 
 // Style
 import "./Navbar.css";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { Menu, MenuItem, IconButton } from "@material-ui/core";
-import { red, teal } from "@material-ui/core/colors";
+import { IconButton } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   menu_button: {
     margin: "1rem 1rem 1rem 1rem",
     color: "rgb(245,245,245)",
-    backgroundColor: "rgba(230, 169, 145, 0.6)",
     alignSelf: "flex-end",
     "&:hover": {
       color: "#528d7f",
     },
-    [theme.breakpoints.up(600)]: {
+    [theme.breakpoints.up(768)]: {
       display: "none",
     },
   },
@@ -32,7 +29,7 @@ function NavBar() {
   const classes = useStyles();
   const navigate = useNavigate();
   const [menuHidden, setMenuHidden] = useState<boolean>(true);
-  const [vpWidth, setVPWidth] = useState<number>(window.innerWidth);
+  // const [vpWidth, setVPWidth] = useState<number>(window.innerWidth);
 
   const menuOpen = (e: React.MouseEvent<HTMLElement>) => {
     setMenuHidden(false);
@@ -52,21 +49,22 @@ function NavBar() {
     navigate(path);
   };
 
-  useEffect(() => {
-    let isMounted = true;
-    const updateWidth = () => {
-      if (isMounted) {
-        setVPWidth(window.innerWidth);
-      }
-    };
+  // useEffect(() => {
+  //   let isMounted = true;
+  //   const updateWidth = () => {
+  //     if (isMounted) {
+  //       setVPWidth(window.innerWidth);
+  //     }
+  //   };
 
-    window.addEventListener("resize", updateWidth);
-    return () => {
-      isMounted = false;
+  //   window.addEventListener("resize", updateWidth);
+  //   return () => {
+  //     isMounted = false;
 
-      window.removeEventListener("resize", updateWidth);
-    };
-  }, [menuHidden]);
+  //     window.removeEventListener("resize", updateWidth);
+  //   };
+  // }, [menuHidden]);
+
   return (
     <div className="nb-main">
       <IconButton
@@ -101,9 +99,9 @@ function NavBar() {
         </button>
         <button
           className="menu-item"
-          onClick={(e) => handleClose(e, "/contacts")}
+          onClick={(e) => handleClose(e, "/contact")}
         >
-          Contacts
+          Contact
         </button>
       </div>
     </div>

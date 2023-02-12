@@ -13,27 +13,26 @@
   display: flex;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1024px) {
   .nb-main {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-    /* background-color: rgba(0, 0, 0, 0.5); */
+    grid-template-columns: 1fr 4fr 1fr;
   }
   .menu {
     display: grid;
-    grid-column: 3/4;
+    grid-column: 2/3;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
   }
-
   .menu-item {
     background-color: rgba(245, 245, 245, 0);
     color: rgb(255, 255, 255);
     border: none;
-    font-size: 1rem;
+    padding: 3rem 0 3rem 0;
     font-family: BaskerVilleFont;
-    padding: 1rem 0 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 400;
   }
   .menu-item:hover {
     background-color: rgba(245, 245, 245, 0.2);
@@ -44,7 +43,37 @@
   }
 }
 
-@media only screen and (max-width: 599px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .nb-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+  }
+  .menu {
+    display: grid;
+    grid-column: 2/5;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-item {
+    background-color: rgba(245, 245, 245, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 3rem 0 3rem 0;
+    font-family: BaskerVilleFont;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  .menu-item:hover {
+    background-color: rgba(245, 245, 245, 0.2);
+    cursor: pointer;
+  }
+  #close-button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
   .nb-main {
     flex-direction: column;
     justify-content: flex-end;

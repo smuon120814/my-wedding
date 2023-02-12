@@ -15,27 +15,27 @@ const info_content: {
 }[] = [
   {
     category: "Food",
-    text: "Find a good place to eat",
+    text: "The authentic taste of Vietnam",
     url: "/information/food",
     img_url: "/images/food.png",
   },
   {
     category: "Accomodation",
-    text: "Where to stay",
-    url: "https://www.google.com/maps/place/Phi+banh+mi/@15.8819428,108.3267453,15z/data=!4m2!3m1!1s0x0:0x2abea9e4b17f5371?sa=X&ved=2ahUKEwiN9v256Yr7AhUDz4UKHQdsCIcQ_BJ6BAh1EAU",
+    text: "Sleep well and enjoy",
+    url: "information/accomodations",
     img_url: "/images/hotel.jpg",
   },
   {
     category: "Transportation",
-    text: "Taxi, motocycle, bicycle",
-    url: "https://www.google.com/maps/place/Phi+banh+mi/@15.8819428,108.3267453,15z/data=!4m2!3m1!1s0x0:0x2abea9e4b17f5371?sa=X&ved=2ahUKEwiN9v256Yr7AhUDz4UKHQdsCIcQ_BJ6BAh1EAU",
+    text: "Taxi, motorbike, bicycle",
+    url: "information/transportation",
     img_url: "/images/transportation.jpg",
   },
   {
-    category: "Change Money",
-    text: "Best place to change money",
-    url: "https://www.google.com/maps/place/Phi+banh+mi/@15.8819428,108.3267453,15z/data=!4m2!3m1!1s0x0:0x2abea9e4b17f5371?sa=X&ved=2ahUKEwiN9v256Yr7AhUDz4UKHQdsCIcQ_BJ6BAh1EAU",
-    img_url: "changemoney.jpg",
+    category: "Exchange Money",
+    text: "Exchange to vietnamese Dong (VND)",
+    url: "information/moneyexchange",
+    img_url: "/images/changemoney.jpg",
   },
 ];
 
@@ -45,12 +45,11 @@ const InformationOverview = () => {
       <div className="io-header">
         <Navbar />
         <h1 className="io-title">Information</h1>
+        <p className="io-description">Prepare your trip</p>
       </div>
 
       <p className="io-description">
         Some good tips to help you enjoy your stay in Hội An and Da Nang
-        {/* Quelques bonnes addresses et bon conseils pour bien pr&#233;parer votre
-        s&#233;jour au Vietnam */}
       </p>
 
       <div className="io-body">

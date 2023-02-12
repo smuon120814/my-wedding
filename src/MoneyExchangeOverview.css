@@ -1,0 +1,288 @@
+/* FONT FAMILY */
+@font-face {
+  font-family: BaskerVilleFont;
+  src: url("fonts/Baskervville-Regular.ttf");
+}
+
+@font-face {
+  font-family: AlissonScript;
+  src: url("fonts/Allison_Script.otf");
+}
+
+.meo-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(245, 245, 245);
+}
+
+.meo-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("./images/changemoney.jpg");
+  background-size: cover;
+}
+.meo-title {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  font-family: AlissonScript;
+  animation: fade-up 1s ease-out forwards;
+  color: rgb(245, 245, 245);
+}
+.meo-title > h1 > span {
+  color: #e6a991;
+}
+
+.meo-description {
+  margin: 0px 40px 0px 40px;
+  font-family: BaskerVilleFont;
+  color: rgb(245, 245, 245);
+  animation-delay: 0.5s;
+  animation: fade-left 1s ease-out forwards;
+}
+.meo-description > span {
+  color: #e6a991;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.meo-convert {
+  background-color: #007a5d;
+}
+.meo-convert > h2 {
+  font-family: AlissonScript;
+  color: rgb(245, 245, 245);
+  text-align: justify;
+}
+.meo-convert > ul {
+  font-family: BaskerVilleFont;
+  color: rgb(245, 245, 245);
+}
+.meo-convert > p {
+  box-sizing: border-box;
+  font-family: BaskerVilleFont;
+  text-align: right;
+  color: rgb(245, 245, 245);
+}
+.meo-text {
+  font-family: BaskerVilleFont;
+}
+.meo-gold-rule {
+  font-family: BaskerVilleFont;
+  color: #e6a991;
+}
+
+.meo-location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .meo-header {
+    padding-bottom: 60px;
+  }
+  .meo-title > h1 {
+    font-size: 100px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+  .meo-convert {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    padding: 60px 0px 60px 0px;
+  }
+  .meo-convert > h2 {
+    font-size: 80px;
+    grid-column: 2/3;
+    margin: 0px 0px 60px 0px;
+    font-weight: 400;
+  }
+  .meo-convert > ul {
+    padding: 0px;
+    grid-column: 2/3;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0px;
+  }
+  .meo-convert > ul > li {
+    list-style-type: none;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+  .meo-convert > p {
+    font-size: 20px;
+    grid-column: 2/3;
+    margin: 0px;
+  }
+  .meo-text-block {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    padding: 60px 0px 60px 0px;
+  }
+  .meo-text {
+    grid-column: 2/3;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 20px;
+  }
+  .meo-text > span {
+    font-weight: 600;
+  }
+  .meo-gold-rule {
+    grid-column: 2/3;
+    padding: 0px 40px 0px 40px;
+    margin: 0px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .meo-location {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    padding: 60px 0px 60px 0px;
+    grid-gap: 20px;
+  }
+  .meo-location :nth-child(odd) {
+    grid-column: 2/3;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .meo-header {
+    padding-bottom: 40px;
+  }
+  .meo-title > h1 {
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .meo-convert {
+    padding: 60px;
+  }
+  .meo-convert > h2 {
+    font-size: 80px;
+    margin: 0px 0px 60px 0px;
+    font-weight: 400;
+  }
+  .meo-convert > ul {
+    padding: 20px 0px 0px 20px;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0px;
+  }
+  .meo-convert > ul > li {
+    list-style-type: none;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+  .meo-convert > p {
+    font-size: 20px;
+    margin: 0px;
+  }
+  .meo-text {
+    padding: 40px 60px 40px 60px;
+    margin: 0px;
+    text-align: justify;
+    font-size: 20px;
+  }
+  .meo-text > span {
+    font-weight: 600;
+  }
+  .meo-gold-rule {
+    padding: 0px 40px 0px 40px;
+    margin: 0px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .meo-location {
+    padding: 60px 60px 40px 60px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .meo-header {
+    padding-bottom: 40px;
+  }
+  .meo-title > h1 {
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .meo-convert {
+    padding: 20px;
+  }
+  .meo-convert > h2 {
+    padding: 20px;
+    font-size: 48px;
+    margin: 0px;
+    font-weight: 400;
+  }
+  .meo-convert > ul {
+    padding: 20px 0px 0px 20px;
+    font-weight: 400;
+  }
+  .meo-convert > ul > li {
+    list-style-type: none;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+  .meo-convert > p {
+    font-size: 12px;
+    padding-top: 30px;
+    margin-bottom: 10px;
+  }
+  .meo-text {
+    padding: 40px 40px 40px 40px;
+    margin: 0px;
+    text-align: justify;
+    font-size: 16px;
+  }
+  .meo-text > span {
+    font-weight: 600;
+  }
+  .meo-gold-rule {
+    padding: 0px 40px 0px 40px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .meo-location {
+    padding: 20px;
+  }
+}
